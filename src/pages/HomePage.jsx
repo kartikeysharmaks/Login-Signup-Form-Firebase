@@ -114,7 +114,7 @@ const HomePage = () => {
   return (
     <div className="-z-10">
       {error && <div> {error}</div>}
-      <div className=" flex items-center justify-between pt-10 pb-4">
+      <div className=" flex items-center justify-between py-4">
         <Link to={"/profile"}>
           <button className="bg-purple-700 text-white text-xs sm:text-base px-5 py-2 rounded-full">
             Profile
@@ -128,11 +128,11 @@ const HomePage = () => {
         </div>
       </div>
       <div className="border-[1px] border-gray-300" />
-      <h1 className="text-purple-700 p-3 mt-2 text-center text-xl font-black">
+      <h1 className="text-purple-700 p-3 mt-3 text-center text-xl font-black">
         Hello {user && user.email}{" "}
       </h1>
-      <h1 className="p-2 text-2xl text-center">User Details Form </h1>
-      <p className="pb-2 text-center">
+      <h2 className="mt-1 text-2xl text-center">User Details Form </h2>
+      <p className="mb-2 text-center text-gray-500">
         Fill all the details to create your profile
       </p>
       <form
@@ -146,7 +146,7 @@ const HomePage = () => {
             value={firstName}
             id=""
             onChange={handleChange}
-            className="my-2 mx-1 w-[270px] h-[30] sm:w-[360px] sm:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
+            className="my-2 mx-1 w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
           <span className=" absolute w-[100px] top-5 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {firstName ? "" : "First name"}
@@ -159,7 +159,7 @@ const HomePage = () => {
             value={lastName}
             id=""
             onChange={handleChange}
-            className="my-2 mx-1 w-[270px] h-[30] sm:w-[360px] sm:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
+            className="my-2 mx-1 w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
           <span className="absolute w-[100px] top-5 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {lastName ? "" : "Last name"}
@@ -172,7 +172,7 @@ const HomePage = () => {
             value={address}
             id=""
             onChange={handleChange}
-            className="my-2 mx-1 w-[270px] h-[30] sm:w-[360px] sm:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
+            className="my-2 mx-1 w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
           <span className="absolute w-[90px] top-5 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {address ? "" : "Address"}
@@ -185,7 +185,7 @@ const HomePage = () => {
             value={profession}
             id=""
             onChange={handleChange}
-            className="my-2 mx-1 w-[270px] h-[30] sm:w-[360px] sm:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
+            className="my-2 mx-1 w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
           <span className="absolute w-[110px] top-5 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {profession ? "" : "Profession"}
@@ -198,7 +198,7 @@ const HomePage = () => {
             value={age}
             id=""
             onChange={handleChange}
-            className="my-2 mx-1 w-[270px] h-[30] sm:w-[360px] sm:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
+            className="my-2 mx-1 w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
           <span className="absolute w-[60px] top-5 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {age ? "" : "Age"}
@@ -221,7 +221,7 @@ const HomePage = () => {
             progress !== null && progress < 100
               ? "bg-gray-300"
               : "bg-violet-700  hover:bg-violet-800"
-          } text-white text-base w-[270px] h-[30] p-2 md:p-0 sm:w-[360px] sm:h-[40px] md:w-[450px] md:h-[50px] rounded-full transition my-3`}
+          } text-white text-base w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] p-2 md:p-0 rounded-full transition my-3`}
         >
           {progress > 1 && progress < 100 ? "Uploading" : "Submit"}
         </button>

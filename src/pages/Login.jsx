@@ -61,7 +61,7 @@ const Login = () => {
 
   return (
     <div>
-      <div className="flex items-center justify-between text-purple-500 font-bold mt-10">
+      <div className="flex items-center justify-between text-purple-500 font-bold mt-5 p-1">
         <Link to={"/register"}>
           <div className="cursor-pointer flex items-center text-xs">
             <MdArrowBackIos />
@@ -70,10 +70,11 @@ const Login = () => {
         </Link>
         <div className="cursor-pointer text-xs">Need any help?</div>
       </div>
-      <h1 className="text-2xl text-gray-800 text-center font-medium mt-8">
+      
+      <h1 className="text-2xl text-gray-800 text-center font-medium mt-5 p-2">
         Login
       </h1>
-      <p className="text-gray-500 leading-5 text-center mb-5 mt-2">
+      <p className="text-gray-500 leading-5 text-center mb-2">
         Sign-in to continue
       </p>
       {error && <div className="my-4 text-center"> {error.message} </div>}
@@ -88,7 +89,7 @@ const Login = () => {
             value={email}
             id="email"
             onChange={handleChange}
-            className="my-2 mx-1 w-[270px] h-[30] sm:w-[360px] sm:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
+            className="my-2 mx-1 w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
           <span className="absolute top-5 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {email ? "" : "Email"}
@@ -101,7 +102,7 @@ const Login = () => {
             value={password}
             id="password"
             onChange={handleChange}
-            className="my-2 mx-1 w-[270px] h-[30] sm:w-[360px] sm:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
+            className="my-2 mx-1 w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
           <span className="absolute w-[100px] top-5 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {password ? "" : "Password"}
@@ -109,7 +110,7 @@ const Login = () => {
         </label>
         <button
           type="submit"
-          className="w-[270px] h-[30] sm:w-[360px] sm:h-[40px] md:w-[450px] md:h-[50px] p-2 md:p-0  bg-purple-700 text-white text-base font-medium md:font-semibold rounded-full mt-5 md:mt-4"
+          className="w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] p-2 md:p-0  bg-purple-700 text-white text-base font-medium md:font-semibold rounded-full mt-5 md:mt-4"
         >
           Submit
         </button>
@@ -144,7 +145,7 @@ const Login = () => {
           />
           Login with Facebook
         </button>
-        <div className="text-gray-600 my-5">
+        <div className="text-gray-600 mt-2 mb-5">
           Don't have an account?{" "}
           <Link to={"/register"}>
             <span className="text-purple-500 font-medium">Register here</span>

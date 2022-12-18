@@ -36,7 +36,7 @@ const Profile = () => {
   return (
     <div className="flex-col items-center justify-center">
       {error && error}
-      <div className="flex items-center justify-between pt-10 pb-5">
+      <div className="flex items-center justify-between py-5">
         <Link to={"/"}>
           <button className="bg-purple-700 text-white text-xs sm:text-base rounded-full py-2 px-5">
             Form Page
@@ -49,7 +49,7 @@ const Profile = () => {
           Logout
         </button>
       </div>
-      <h1 className="text-4xl my-5 text-center">Profile Page</h1>
+      <h1 className="text-4xl mb-4 text-center">Profile Page</h1>
       <div className="border-[1px] border-gray-300" />
       <div className="flex flex-col justify-center bg-gray-100 p-3 sm:p-5 mt-5 rounded-xl ">
         <div className="flex h-[150px] w-[150px]">
