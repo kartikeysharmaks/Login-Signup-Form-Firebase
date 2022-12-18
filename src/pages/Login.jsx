@@ -89,7 +89,7 @@ const Login = () => {
             value={email}
             id="email"
             onChange={handleChange}
-            className="my-2 mx-1 w-[270px] h-[30px] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
+            className="my-2 mx-1 w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
           <span className="absolute top-5 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {email ? "" : "Email"}
@@ -102,7 +102,7 @@ const Login = () => {
             value={password}
             id="password"
             onChange={handleChange}
-            className="my-2 mx-1 w-[270px] h-[30px] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
+            className="my-2 mx-1 w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
           <span className="absolute w-[100px] top-5 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {password ? "" : "Password"}
@@ -124,19 +124,19 @@ const Login = () => {
       <div className="flex flex-col items-center">
         <button
           type="submit"
-          className="w-[270px] h-[30px] sm:w-[360px] sm:h-[40px] md:w-[450px] md:h-[50px] p-2 md:p-0 bg-gray-100 text-black text-base font-medium md:font-semibold rounded-full mt-5 md:mt-4 flex items-center justify-center"
+          className="w-[270px] h-[30] sm:w-[360px] sm:h-[40px] md:w-[450px] md:h-[50px] p-2 md:p-0 bg-gray-100 text-black text-base font-medium md:font-semibold rounded-full mt-5 md:mt-4 flex items-center justify-center"
           onClick={() => signInWithGoogle()}
         >
           <img
             src="https://cdn-icons-png.flaticon.com/128/2991/2991148.png"
             alt="google"
-            className="h-5 md:h-7 mr-2"
+            className="h-[28px] md:h-[30px] mr-[5px]"
           />
           Login with Google
         </button>
         <button
           type="submit"
-          className="w-[270px] h-[30px] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] p-2 md:p-0 bg-white border-gray-200 border-[2px] text-base rounded-full my-5 md:mt-4 flex items-center justify-center"
+          className="w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] p-2 md:p-0 bg-white border-gray-200 border-[2px] text-base rounded-full my-5 md:mt-4 flex items-center justify-center"
           onClick={() => signInWithGithub()}
         >
           <img

@@ -75,7 +75,7 @@ const Register = () => {
             value={fullName}
             required
             onChange={(e) => setFullName(e.target.value)}
-            className="my-2 mx-1 w-[270px] h-[30px] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] px-8 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
+            className="my-2 mx-1 w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] px-8 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
           <span className="absolute w-[100px] top-5 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {fullName ? "" : "Full name"}
@@ -87,7 +87,7 @@ const Register = () => {
             value={email}
             required
             onChange={(e) => setEmail(e.target.value)}
-            className="my-2 mx-1 w-[270px] h-[30px] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
+            className="my-2 mx-1 w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
           <span className=" absolute top-5 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {email ? "" : "Email"}
@@ -99,7 +99,7 @@ const Register = () => {
             value={password}
             required
             onChange={(e) => setPassword(e.target.value)}
-            className="my-2 mx-1 w-[270px] h-[30px] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
+            className="my-2 mx-1 w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
           <span className="absolute w-[100px] top-5 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {password ? "" : "Password"}
@@ -128,7 +128,7 @@ const Register = () => {
         </div>
         <button
           type="submit"
-          className="w-[270px] h-[30px] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] bg-purple-500 hover:bg-purple-700 p-2 md:p-0 text-white text-base rounded-full mt-5 md:mt-4"
+          className="w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] bg-purple-500 hover:bg-purple-700 p-2 md:p-0 text-white text-base rounded-full mt-5 md:mt-4"
         >
           Submit
         </button>
@@ -142,25 +142,25 @@ const Register = () => {
       <div className="flex flex-col items-center">
         <button
           type="submit"
-          className="w-[270px] h-[30px] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] p-2 md:p-0  bg-white border-gray-200 border-[2px] text-base rounded-full mt-5 md:mt-4 flex items-center justify-center"
+          className="w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] p-2 md:p-0 bg-white border-gray-200 border-[2px] text-base rounded-full mt-5 md:mt-4 flex items-center justify-center"
           onClick={() => signInWithGoogle()}
         >
           <img
             src={require("../assets/Google.png")}
             alt="google"
-            className="h-[21px] md:h-[28px] mr-[5px]"
+            className="h-[28px] md:h-[30px] mr-[5px]"
           />
           With Google
         </button>
         <button
           type="submit"
-          className="w-[270px] h-[30px] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] p-2 md:p-0 bg-gray-100 border-[2px] text-base rounded-full my-5 md:mt-4 flex items-center justify-center"
+          className="w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] p-2 md:p-0 bg-gray-100 border-[2px] text-base rounded-full my-5 md:mt-4 flex items-center justify-center"
           onClick={() => signInWithGithub()}
         >
           <img
             src={require("../assets/Github.png")}
             alt="facebook"
-            className="h-[30px] sm:h-[36px]"
+            className="h-[32px] sm:h-[36px]"
           />
           With Github
         </button>
