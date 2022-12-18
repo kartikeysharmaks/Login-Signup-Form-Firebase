@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { MdArrowBackIos } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth, signInWithGoogle } from "../firebase.js";
+import { auth, signInWithGoogle, signInWithGithub } from "../firebase.js";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -148,20 +148,21 @@ const Register = () => {
           <img
             src={require("../assets/Google.png")}
             alt="google"
-            className="h-[21px] md:h-[28px] mr-2"
+            className="h-[21px] md:h-[28px] mr-[5px]"
           />
           With Google
         </button>
         <button
           type="submit"
           className="w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] p-2 md:p-0  bg-white border-gray-200 border-[2px] text-base rounded-full my-5 md:mt-4 flex items-center justify-center"
+          onClick={() => signInWithGithub()}
         >
           <img
-            src={require("../assets/Facebook.png")}
+            src={require("../assets/Github.png")}
             alt="facebook"
             className="h-[30px] sm:h-[36px]"
           />
-          With Facebook
+          With Github
         </button>
         <div className="text-gray-600 mt-2 mb-5">
           Already have an account?{" "}

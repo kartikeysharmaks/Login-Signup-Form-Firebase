@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import {
   GoogleAuthProvider,
+  GithubAuthProvider,
   getAuth,
   signInWithPopup,
   signOut,
@@ -32,8 +33,20 @@ const signInWithGoogle = async () => {
   }
 };
 
+const githubProvider = new GithubAuthProvider();
+const signInWithGithub = async () => {
+  try {
+    const res = await signInWithPopup(auth, githubProvider);
+    const user = res.user;
+    console.log(user);
+  } catch (err) {
+    console.error(err);
+    alert(err.message);
+  }
+};
+
 const logout = () => {
   signOut(auth);
 };
 
-export { app, auth, db, signInWithGoogle, logout };
+export { app, auth, db, signInWithGoogle, signInWithGithub, logout };

@@ -128,7 +128,7 @@ const HomePage = () => {
         </div>
       </div>
       <div className="border-[1px] border-gray-300" />
-      <h1 className="text-purple-700 p-3 mt-3 text-center text-xl font-black">
+      <h1 className="text-purple-700 p-3 mt-3 text-center text-base xs:text-xl font-black">
         Hello {user && user.email}{" "}
       </h1>
       <h2 className="mt-1 text-2xl text-center">User Details Form </h2>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { MdArrowBackIos } from "react-icons/md";
-import { auth, signInWithGoogle } from "../firebase.js";
+import { auth, signInWithGithub, signInWithGoogle } from "../firebase.js";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { ToastContainer, toast } from "react-toastify";
@@ -20,8 +20,8 @@ const Login = () => {
 
   const handlesubmit = (e) => {
     e.preventDefault();
-    if (email === "Email-id is required!") {
-      toast.error("");
+    if (email === "") {
+      toast.error("Email-id is required!");
     } else if (password === "") {
       toast.error("Password is required!");
     } else {
@@ -70,7 +70,7 @@ const Login = () => {
         </Link>
         <div className="cursor-pointer text-xs">Need any help?</div>
       </div>
-      
+
       <h1 className="text-2xl text-gray-800 text-center font-medium mt-5 p-2">
         Login
       </h1>
@@ -136,14 +136,15 @@ const Login = () => {
         </button>
         <button
           type="submit"
-          className="w-[270px] h-[30] sm:w-[360px] sm:h-[40px] md:w-[450px] md:h-[50px] p-2 md:p-0 bg-gray-100 text-base font-medium md:font-semibold rounded-full my-5 md:mt-4 flex items-center justify-center"
+          className="w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] p-2 md:p-0  bg-white border-gray-200 border-[2px] text-base rounded-full my-5 md:mt-4 flex items-center justify-center"
+          onClick={() => signInWithGithub()}
         >
           <img
-            src="https://1000logos.net/wp-content/uploads/2016/11/Facebook-logo.png"
+            src={require("../assets/Github.png")}
             alt="facebook"
-            className="h-[26px] md:h-[36px]"
+            className="h-[30px] sm:h-[36px]"
           />
-          Login with Facebook
+          With Github
         </button>
         <div className="text-gray-600 mt-2 mb-5">
           Don't have an account?{" "}
