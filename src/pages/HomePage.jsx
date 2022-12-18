@@ -40,8 +40,10 @@ const HomePage = () => {
       toast.error("First Name is required!");
     } else if (lastName === "") {
       toast.error("Last Name is required!");
+    } else if (address === "") {
+      toast.error("Enter your Address!");
     } else if (profession === "") {
-      toast.error("Enter your profession!");
+      toast.error("Enter your Profession!");
     } else if (age === "") {
       toast.error("Age is required!");
     } else {
@@ -52,9 +54,9 @@ const HomePage = () => {
         uid: user.uid,
         timestamp: serverTimestamp(),
       });
-      setTimeout(()=> {
+      setTimeout(() => {
         navigate("/profile");
-      },5000);
+      }, 5000);
     }
   };
 
@@ -69,11 +71,11 @@ const HomePage = () => {
           const progress =
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
           setProgress(progress);
-          if(progress === 1){
+          if (progress === 1) {
             toast.success(`Uploading image`);
-          };
-          if(progress === 100){
-            toast.success("Uploaded successfully");
+          }
+          if (progress === 100) {
+            toast.success("Profile picture uploaded successfully");
           }
           console.log("Upload is " + progress + "% done");
           switch (snapshot.state) {
@@ -90,7 +92,7 @@ const HomePage = () => {
         },
         (error) => {
           alert(error.message);
-          toast.error(`${error.message}`)
+          toast.error(`${error.message}`);
         },
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
@@ -112,26 +114,32 @@ const HomePage = () => {
   return (
     <div className="-z-10">
       {error && <div> {error} </div>}
-      <div className=" flex items-center justify-evenly pt-10 md:p-10">
+      <div className=" flex items-center justify-between pt-10 pb-4">
         <button
           className="bg-purple-700 text-white text-xs sm:text-base px-5 py-2 rounded-full"
           onClick={() => navigate("/profile")}
         >
           Profile
-        </button>
-        <div className="text-white bg-gray-600 text-xs sm:text-base py-2 px-5 rounded-full">
-          Hello {user && user.email}{" "}
-        </div>{" "}
+        </button>{" "}
         <div
           onClick={logout}
-          className="bg-purple-700 text-white  text-xs sm:text-base rounded-full py-2 px-5"
+          className="bg-purple-700 text-white text-xs sm:text-base rounded-full py-2 px-5"
         >
           Logout
         </div>
       </div>
-      <h1 className="mt-6 p-2 text-4xl ">User Details Form </h1>
-      <p className="pb-2">Fill all the details to create your profile</p>
-      <form onSubmit={handleSubmit}>
+      <div className="border-[1px] border-gray-300" />
+      <h1 className="text-purple-700 p-3 text-center text-xl font-black">
+        Hello {user && user.email}{" "}
+      </h1>
+      <h1 className="mt-4 p-2 text-2xl text-center">User Details Form </h1>
+      <p className="pb-2 text-center">
+        Fill all the details to create your profile
+      </p>
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col justify-center items-center"
+      >
         <label className="relative">
           <input
             type="text"
@@ -141,7 +149,7 @@ const HomePage = () => {
             onChange={handleChange}
             className="my-2 mx-1 w-[300px] h-[50] sm:w-[248px] sm:h-[60px] md:w-[500px] md:h-[60px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
-          <span className=" absolute w-[100px] -top-[2px] text-gray-500 left-0 mx-4 pr-2 transition duration-300 input-text">
+          <span className=" absolute w-[100px] top-6 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {firstName ? "" : "First name"}
           </span>
         </label>
@@ -154,7 +162,7 @@ const HomePage = () => {
             onChange={handleChange}
             className="my-2 mx-1 w-[300px] h-[50] sm:w-[248px] sm:h-[60px] md:w-[500px] md:h-[60px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
-          <span className="absolute w-[100px] -top-[2px] text-gray-500 left-0 mx-4 pr-2 transition duration-300 input-text">
+          <span className="absolute w-[100px] top-6 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {lastName ? "" : "Last name"}
           </span>
         </label>
@@ -167,7 +175,7 @@ const HomePage = () => {
             onChange={handleChange}
             className="my-2 mx-1 w-[300px] h-[50] sm:w-[248px] sm:h-[60px] md:w-[500px] md:h-[60px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
-          <span className="absolute w-[90px] -top-[2px] text-gray-500 left-0 mx-4 pr-2 transition duration-300 input-text">
+          <span className="absolute w-[90px] top-6 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {address ? "" : "Address"}
           </span>
         </label>
@@ -180,7 +188,7 @@ const HomePage = () => {
             onChange={handleChange}
             className="my-2 mx-1 w-[300px] h-[50] sm:w-[248px] sm:h-[60px] md:w-[500px] md:h-[60px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
-          <span className="absolute w-[110px] -top-[2px] text-gray-500 left-0 mx-4 pr-2 transition duration-300 input-text">
+          <span className="absolute w-[110px] top-6 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {profession ? "" : "Profession"}
           </span>
         </label>
@@ -193,10 +201,11 @@ const HomePage = () => {
             onChange={handleChange}
             className="my-2 mx-1 w-[300px] h-[50] sm:w-[248px] sm:h-[60px] md:w-[500px] md:h-[60px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
-          <span className="absolute w-[60px] -top-[2px] text-gray-500 left-0 mx-4 pr-2 transition duration-300 input-text">
+          <span className="absolute w-[60px] top-6 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {age ? "" : "Age"}
           </span>
         </label>
+
         <div className="flex flex-col items-center justify-center gap-3 my-5">
           <p className="font-medium">Choose your profile picture :</p>
           <input
@@ -215,11 +224,11 @@ const HomePage = () => {
               : "bg-violet-700  hover:bg-violet-800"
           } text-white text-base w-[248px] md:w-[500px] h-[60px] rounded-full transition my-5`}
         >
-          {progress < 100 ? "Loading" : "Submit"}
+          {progress > 1 && progress < 100 ? "Uploading" : "Submit"}
         </button>
         <ToastContainer />
       </form>
-      <PopupModal open = {isSubmit} name={firstName} className="z-50"/>
+      <PopupModal open={isSubmit} name={firstName} className="z-50" />
     </div>
   );
 };

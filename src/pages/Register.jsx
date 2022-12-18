@@ -12,7 +12,6 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [fullName, setFullName] = useState("");
   const [user, loading, error] = useAuthState(auth);
-
   const navigate = useNavigate();
 
   const handlesubmit = (e) => {
@@ -50,18 +49,24 @@ const Register = () => {
   return (
     <div className="max-w-[100%] mx-auto">
       <div className="flex items-center justify-between text-purple-500 font-bold mt-10">
-        <div className="cursor-pointer flex items-center" onClick={()=> navigate("/login")}>
-          <MdArrowBackIos />
-          Back to login
-        </div>
-        <div className="cursor-pointer">Need any help?</div>
+        <Link to={"/login"}>
+          <div className="cursor-pointer flex items-center text-xs">
+            <MdArrowBackIos />
+            Back to login
+          </div>
+        </Link>
+
+        <div className="cursor-pointer text-xs">Need any help?</div>
       </div>
-      <h1 className="text-3xl text-gray-800 font-normal mt-8">Registration</h1>
-      <p className="text-gray-500 leading-5 my-2">
+      <h1 className="text-2xl text-gray-800 font-normal text-center mt-8">Registration</h1>
+      <p className="text-gray-500 leading-5 my-2 text-center">
         fill the details to register
       </p>
       {error && <div className="my-4 text-center"> {error.message} </div>}
-      <form onSubmit={handlesubmit}>
+      <form
+        onSubmit={handlesubmit}
+        className="flex flex-col justify-center items-center"
+      >
         <label className="relative">
           <input
             type="text"
@@ -70,7 +75,7 @@ const Register = () => {
             onChange={(e) => setFullName(e.target.value)}
             className="my-2 mx-1  w-[300px] h-[50] sm:w-[248px] sm:h-[60px] md:w-[500px] md:h-[60px] px-8 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
-          <span className="absolute w-[100px] -top-[2px] text-gray-500 left-0 mx-6 pr-2 transition duration-300 input-text">
+          <span className="absolute w-[100px] top-6 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {fullName ? "" : "Full name"}
           </span>
         </label>
@@ -82,7 +87,7 @@ const Register = () => {
             onChange={(e) => setEmail(e.target.value)}
             className="my-2 mx-1 w-[300px] h-[50] sm:w-[248px] sm:h-[60px] md:w-[500px] md:h-[60px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
-          <span className=" absolute -top-[2px] text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
+          <span className=" absolute top-6 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {email ? "" : "Email"}
           </span>
         </label>
@@ -94,13 +99,13 @@ const Register = () => {
             onChange={(e) => setPassword(e.target.value)}
             className="my-2 mx-1 w-[300px] h-[50] sm:w-[248px] sm:h-[60px] md:w-[500px] md:h-[60px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
-          <span className="absolute w-[100px] -top-[2px] text-gray-500 left-0 mx-4 pr-2 transition duration-300 input-text">
+          <span className="absolute w-[100px] top-6 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {password ? "" : "Password"}
           </span>
         </label>
         <button
           type="submit"
-          className="w-[248px] md:w-[500px] h-[60px] bg-purple-500 hover:bg-purple-700 text-white text-lg md:text-xl  rounded-full mt-5 md:mt-4"
+          className="w-[248px] md:w-[500px] h-[60px] bg-purple-500 hover:bg-purple-700 text-white text-lg rounded-full mt-5 md:mt-4"
         >
           Submit
         </button>
@@ -114,11 +119,11 @@ const Register = () => {
       <div className="flex flex-col items-center">
         <button
           type="submit"
-          className="w-[248px] md:w-[500px] h-[60px] bg-white border-gray-200 border-[2px] text-lg md:text-xl rounded-full mt-5 md:mt-4 flex items-center justify-center"
+          className="w-[248px] md:w-[500px] h-[60px] bg-white border-gray-200 border-[2px] text-lg rounded-full mt-5 md:mt-4 flex items-center justify-center"
           onClick={() => signInWithGoogle()}
         >
           <img
-            src="https://cdn-icons-png.flaticon.com/128/2991/2991148.png"
+            src={require("../assets/Google.png")}
             alt="google"
             className="h-[21px] md:h-[28px] mr-2"
           />
@@ -126,10 +131,10 @@ const Register = () => {
         </button>
         <button
           type="submit"
-          className="w-[248px] md:w-[500px] h-[60px] bg-white border-gray-200 border-[2px] text-lg md:text-xl rounded-full my-5 md:mt-4 flex items-center justify-center"
+          className="w-[248px] md:w-[500px] h-[60px] bg-white border-gray-200 border-[2px] text-lg rounded-full my-5 md:mt-4 flex items-center justify-center"
         >
           <img
-            src="https://1000logos.net/wp-content/uploads/2016/11/Facebook-logo.png"
+            src={require("../assets/Facebook.png")}
             alt="facebook"
             className="h-[30px] sm:h-[36px]"
           />

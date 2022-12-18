@@ -18,7 +18,7 @@ const PopupModal = ({ open, name }) => {
               You have successfully submitted the form.
             </p>
             <img
-              src="https://clipart.info/images/ccovers/1559055454purple-thank-you.png"
+              src={require("../assets/Thankyou.png")}
               alt="thank-you-img"
               className="h-[150px] animate-pulse"
             />
