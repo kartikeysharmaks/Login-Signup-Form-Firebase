@@ -4,9 +4,7 @@ const PopupModal = ({ open, name }) => {
   if (!open) return null;
   return (
     <div className="overlay">
-      <div
-        className="modalContainer cursor-pointer"
-      >
+      <div className="modalContainer cursor-pointer">
         <div className="modalRight">
           <p className="closeBtn">X</p>
           <div className="content ">

@@ -58,7 +58,9 @@ const Register = () => {
 
         <div className="cursor-pointer text-xs">Need any help?</div>
       </div>
-      <h1 className="text-2xl text-gray-800 font-normal text-center mt-8">Registration</h1>
+      <h1 className="text-2xl text-gray-800 font-medium text-center mt-8">
+        Registration
+      </h1>
       <p className="text-gray-500 leading-5 my-2 text-center">
         fill the details to register
       </p>
@@ -73,9 +75,9 @@ const Register = () => {
             value={fullName}
             required
             onChange={(e) => setFullName(e.target.value)}
-            className="my-2 mx-1  w-[300px] h-[50] sm:w-[248px] sm:h-[60px] md:w-[500px] md:h-[60px] px-8 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
+            className="my-2 mx-1 w-[270px] h-[30] sm:w-[360px] sm:h-[40px] md:w-[450px] md:h-[50px] px-8 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
-          <span className="absolute w-[100px] top-6 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
+          <span className="absolute w-[100px] top-5 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {fullName ? "" : "Full name"}
           </span>
         </label>
@@ -85,9 +87,9 @@ const Register = () => {
             value={email}
             required
             onChange={(e) => setEmail(e.target.value)}
-            className="my-2 mx-1 w-[300px] h-[50] sm:w-[248px] sm:h-[60px] md:w-[500px] md:h-[60px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
+            className="my-2 mx-1 w-[270px] h-[30] sm:w-[360px] sm:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
-          <span className=" absolute top-6 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
+          <span className=" absolute top-5 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {email ? "" : "Email"}
           </span>
         </label>
@@ -97,15 +99,15 @@ const Register = () => {
             value={password}
             required
             onChange={(e) => setPassword(e.target.value)}
-            className="my-2 mx-1 w-[300px] h-[50] sm:w-[248px] sm:h-[60px] md:w-[500px] md:h-[60px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
+            className="my-2 mx-1 w-[270px] h-[30] sm:w-[360px] sm:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
-          <span className="absolute w-[100px] top-6 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
+          <span className="absolute w-[100px] top-5 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {password ? "" : "Password"}
           </span>
         </label>
         <button
           type="submit"
-          className="w-[248px] md:w-[500px] h-[60px] bg-purple-500 hover:bg-purple-700 text-white text-lg rounded-full mt-5 md:mt-4"
+          className="w-[270px] h-[30] sm:w-[360px] sm:h-[40px] md:w-[450px] md:h-[50px] bg-purple-500 hover:bg-purple-700 p-2 md:p-0 text-white text-base rounded-full mt-5 md:mt-4"
         >
           Submit
         </button>
@@ -119,7 +121,7 @@ const Register = () => {
       <div className="flex flex-col items-center">
         <button
           type="submit"
-          className="w-[248px] md:w-[500px] h-[60px] bg-white border-gray-200 border-[2px] text-lg rounded-full mt-5 md:mt-4 flex items-center justify-center"
+          className="w-[270px] h-[30] sm:w-[360px] sm:h-[40px] md:w-[450px] md:h-[50px] p-2 md:p-0  bg-white border-gray-200 border-[2px] text-base rounded-full mt-5 md:mt-4 flex items-center justify-center"
           onClick={() => signInWithGoogle()}
         >
           <img
@@ -131,7 +133,7 @@ const Register = () => {
         </button>
         <button
           type="submit"
-          className="w-[248px] md:w-[500px] h-[60px] bg-white border-gray-200 border-[2px] text-lg rounded-full my-5 md:mt-4 flex items-center justify-center"
+          className="w-[270px] h-[30] sm:w-[360px] sm:h-[40px] md:w-[450px] md:h-[50px] p-2 md:p-0  bg-white border-gray-200 border-[2px] text-base rounded-full my-5 md:mt-4 flex items-center justify-center"
         >
           <img
             src={require("../assets/Facebook.png")}
