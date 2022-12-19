@@ -12,6 +12,16 @@
 - All components and pages are responsive i.e. works well on all the devices.
 - Form Validation and error handling is implemented i.e. you can only submit the form if all the input fields are filled, validate whether the email is registered or not, whether the password is correct or not. If any error occured during storing data or authentication it will be displayed using notification pop-ups.
 
+## Test Credentials
+- Name - Unknown 
+- Email - unknown@gmail.com
+- Password - unknown@123
+- First Name - Unknown
+- Last Name - Sharma
+- Profession - Student
+- Age - 25
+- Address - Haridwar
+
 ## Login Page
 
 #### Laptop Screen
