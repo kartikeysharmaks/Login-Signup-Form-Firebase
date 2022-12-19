@@ -76,8 +76,8 @@ const Register = () => {
             onChange={(e) => setFullName(e.target.value)}
             className="my-2 mx-1 w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] px-8 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
-          <span className="absolute w-[100px] top-5 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
-            {fullName ? "" : "Full name"}
+          <span className="absolute w-[89px] top-5 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
+            {fullName ? "" : "Full Name"}
           </span>
         </label>
         <label className="relative">
@@ -98,11 +98,11 @@ const Register = () => {
             onChange={(e) => setPassword(e.target.value)}
             className="my-2 mx-1 w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
-          <span className="absolute w-[100px] top-5 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
+          <span className="absolute w-[80px] top-5 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {password ? "" : "Password"}
           </span>
         </label>
-        <div className="flex items-center my-2 py-1 justify-center">
+        <div className="flex items-center my-2 py-1 justify-center w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px]">
           <input
             id="link-checkbox"
             type="checkbox"
@@ -111,7 +111,7 @@ const Register = () => {
           />
           <label
             htmlFor="link-checkbox"
-            className="ml-4 text-base font-medium text-gray-900 dark:text-gray-300"
+            className="ml-4 text-base font-medium text-gray-900"
           >
             I agree with the{" "}
             <span className="text-purple-600 dark:text-purple-600 hover:underline">
