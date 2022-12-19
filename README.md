@@ -21,6 +21,7 @@
 - Profession - Student
 - Age - 25
 - Address - Haridwar
+- Profile - Upload any random image to test
 
 ## Login Page
 
