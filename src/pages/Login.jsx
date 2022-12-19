@@ -124,27 +124,27 @@ const Login = () => {
       <div className="flex flex-col items-center">
         <button
           type="submit"
-          className="w-[270px] h-[30] sm:w-[360px] sm:h-[40px] md:w-[450px] md:h-[50px] p-2 md:p-0 bg-gray-100 text-black text-base font-medium md:font-semibold rounded-full mt-5 md:mt-4 flex items-center justify-center"
+          className="w-[270px] h-[30] sm:w-[360px] sm:h-[40px] md:w-[450px] md:h-[50px] p-2 md:p-0 bg-gray-100 text-black text-base font-medium rounded-full mt-5 md:mt-4 flex items-center justify-center"
           onClick={() => signInWithGoogle()}
         >
           <img
             src="https://cdn-icons-png.flaticon.com/128/2991/2991148.png"
             alt="google"
-            className="h-[28px] md:h-[30px] mr-[5px]"
+            className="h-[25px] md:h-[28px] mr-[6px]"
           />
           Login with Google
         </button>
         <button
           type="submit"
-          className="w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] p-2 md:p-0 bg-white border-gray-200 border-[2px] text-base rounded-full my-5 md:mt-4 flex items-center justify-center"
+          className="w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] p-2 md:p-0 bg-white border-gray-200 border-[2px] text-base font-medium rounded-full my-5 md:mt-4 flex items-center justify-center"
           onClick={() => signInWithGithub()}
         >
           <img
             src={require("../assets/Github.png")}
             alt="facebook"
-            className="h-[30px] sm:h-[36px]"
+            className="h-[30px] sm:h-[36px] mr-[2px]"
           />
-          With Github
+          Login with Github
         </button>
         <div className="text-gray-600 mt-2 mb-5">
           Don't have an account?{" "}
