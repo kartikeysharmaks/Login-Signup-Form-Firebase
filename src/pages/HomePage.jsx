@@ -120,12 +120,12 @@ const HomePage = () => {
             Profile
           </button>
         </Link>{" "}
-        <div
+        <button
           onClick={logout}
           className="bg-purple-700 text-white text-xs sm:text-base rounded-full py-2 px-5"
         >
           Logout
-        </div>
+        </button>
       </div>
       <div className="border-[1px] border-gray-300" />
       <h1 className="text-purple-700 p-3 mt-3 text-center text-base xs:text-xl font-black">
@@ -205,7 +205,7 @@ const HomePage = () => {
           </span>
         </label>
 
-        <div className="flex flex-col items-center justify-center gap-3 my-5">
+        <div className="flex flex-col items-center justify-center gap-3 my-5 ">
           <p className="font-medium">Choose your profile picture :</p>
           <input
             type="file"
@@ -213,7 +213,6 @@ const HomePage = () => {
             className="ml-[80px]"
           />
         </div>
-
         <button
           type="submit"
           disabled={progress !== null && progress < 100}

@@ -74,9 +74,9 @@ const Register = () => {
             type="text"
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
-            className="my-2 mx-1 w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] px-8 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
+            className="my-2 mx-1 w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] px-6 py-3 rounded-full outline-none border-[1px] border-gray-400 focus:border-purple-500 transition duration-200"
           />
-          <span className="absolute w-[89px] top-5 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
+          <span className="absolute top-5 text-gray-500 left-0 mx-6 px-2 transition duration-300 input-text">
             {fullName ? "" : "Full Name"}
           </span>
         </label>
